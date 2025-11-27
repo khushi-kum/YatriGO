@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YatriGo - Discover India's Hidden Trails</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- Fixed Header / Navbar -->
+    <header class="app-header">
+        <div class="header-left">
+            <button class="menu-toggle" aria-controls="slide-menu" aria-expanded="false" aria-label="Open menu">
+                <span class="hamburger-icon"></span>
+            </button>
+            <div class="header-logo">YatriGo</div>
+        </div>
+        <div class="header-actions">
+            <button class="action-btn home-scroll" aria-label="Scroll to Home/Hero section">
+                <i class="fas fa-home"></i>
+            </button>
+
+            <div class="action-group">
+                <button class="action-btn notification-toggle" aria-expanded="false" aria-controls="notification-panel" aria-label="View notifications">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-count" aria-hidden="true">3</span>
+                </button>
+                <div class="dropdown-panel" id="notification-panel" aria-hidden="true" tabindex="-1">
+                    <h4>Notifications</h4>
+                    <p>New tour booked: Taj Mahal at dawn.</p>
+                    <p>Guide 'Rohan' responded to your message.</p>
+                    <p>Your last review received 10 likes!</p>
+                    <div class="view-all">View All</div>
+                </div>
+            </div>
+
+            <div class="action-group">
+                <button class="action-btn profile-toggle" aria-expanded="false" aria-controls="profile-panel" aria-label="Open user profile and sign in menu">
+                    <i class="fas fa-user-circle"></i>
+                </button>
+                <div class="dropdown-panel profile-panel" id="profile-panel" aria-hidden="true" tabindex="-1">
+                    <div class="profile-auth-content">
+                        <!-- Content rendered by JavaScript (Sign In or User Info) -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+         
+
+    <!-- Slide-Over Menu Panel and Overlay -->
+    <div class="menu-overlay" aria-hidden="true"></div>
+    <nav class="slide-menu-panel" id="slide-menu" aria-hidden="true" tabindex="-1">
+        <button class="close-menu-btn" aria-label="Close menu">&times;</button>
+        
+        <ul class="menu-list">
+           <h1>YatriGo</h1>
+            <li><a href="#hero" onclick="toggleSlideMenu(true)">Home</a></li>
+            <li><a href="#features" onclick="toggleSlideMenu(true)">trips</a></li>
+            <li><a href="#experiences" onclick="toggleSlideMenu(true)">Experiences</a></li>
+            <li><a href="#">Travel Blog</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li class="theme-menu-item">
+                <button class="theme-toggle-label" aria-expanded="false" aria-controls="theme-radios">
+                    Theme Settings <i class="fas fa-caret-down"></i>
+                </button>
+                <div class="theme-radio-group" id="theme-radios" aria-expanded="false">
+                    <label><input type="radio" name="app-theme" value="light" id="theme-light"> Light Mode</label>
+                    <label><input type="radio" name="app-theme" value="dark" id="theme-dark"> Dark Mode</label>
+                </div>
+            </li>
+        </ul>
+        <div class="menu-footer">
+            &copy; 2025 YatriGo. All rights reserved.
+        </div>
+    </nav>
+
+    <!-- Main Content Sections -->
+
+    <section class="hero" id="hero">
+        <!-- Old top-bar element is removed -->
+        <nav class="nav">
+            <a href="#features">Features</a>
+            <a href="#experiences">Experiences</a>
+            <a href="#">Destinations</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <div class="logo">
+            <div class="logo-icon"></div>
+            <div class="logo-text">Ready to explore</div>
+        </div>
+
+        <div class="hero-content">
+            <h1>Uncover India's Secrets with Local Storytellers.</h1>
+            <button class="hero-button">Start Your Journey</button>
+        </div>
+
+        <div class="image-collage">
+            <div class="img-circle"></div>
+            <div class="img-circle"></div>
+            <div class="img-circle"></div>
+            <div class="img-circle"></div>
+            <div class="img-circle"></div>
+            <div class="img-circle"></div>
+            <div class="img-circle"></div>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="feature feature-1">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon><line x1="8" y1="2" x2="8" y2="18"></line><line x1="16" y1="6" x2="16" y2="22"></line></svg>
+            </div>
+            <h3>Authentic Trails</h3>
+            <p>Discover pathways and places tourists never see, curated by people who live here.</p>
+        </div>
+        <div class="feature feature-2">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h3>Local Guides</h3>
+            <p>Connect with passionate guides, historians, and storytellers for a truly unique journey.</p>
+        </div>
+        <div class="feature feature-3">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-camera"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+            </div>
+            <h3>Cultural Immersion</h3>
+            <p>Go beyond sightseeing and immerse yourself in the rich traditions and local cuisines.</p>
+        </div>
+    </section>
+
+    <section class="experiences" id="experiences">
+        <h2>Your Next Great Indian Adventure</h2>
+        <div class="experience-grid">
+            <div class="exp-card">
+                <div class="exp-card-img"></div>
+                <h4>Misty Mountain Trek in the Himalayas</h4>
+            </div>
+            <div class="exp-card">
+                <div class="exp-card-img"></div>
+                <h4>Old Delhi Street Food & History Tour</h4>
+            </div>
+            <div class="exp-card">
+                <div class="exp-card-img"></div>
+                <h4>Sunset Boat Ride on the Ganges River</h4>
+            </div>
+            <div class="exp-card">
+                <div class="exp-card-img"></div>
+                <h4>Ancient Temple Art Workshop, South India</h4>
+            </div>
+            <div class="exp-card">
+                <div class="exp-card-img"></div>
+                <h4>Rajasthan Desert Camel Safari Overnight</h4>
+            </div>
+            <div class="exp-card">
+                <div class="exp-card-img"></div>
+                <h4>Spice Plantation Walk & Cooking Class, Kerala</h4>
+            </div>
+        </div>
+        <button class="explore-btn">Explore All 100+ Experiences</button>
+    </section>
+    </main>
+
+    <footer>
+        <div class="footer-main">
+            <div class="footer-logo">
+                <div class="footer-logo-icon"></div>
+                <div class="footer-logo-text">YatriGo</div>
+            </div>
+            <div class="footer-center">
+                <div class="footer-center-title">Connect With Us</div>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <span class="footer-newsletter-title">Subscribe to our newsletter</span>
+                <div class="footer-newsletter">
+                    <input type="email" placeholder="Your email address">
+                    <button class="hero-button" style="padding: 10px 20px; border-radius: 0; border: none; background: #c9a961; color: white;">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- NEW: Legal Links Section -->
+        <div class="footer-legal">
+            <a href="#" class="footer-link-modal" data-modal="terms-modal">Terms & Conditions</a>
+            <a href="#" class="footer-link-modal" data-modal="privacy-modal">Privacy Policy</a>
+        </div>
+        
+        <div class="footer-copy">
+            &copy; 2025 YatriGo. All rights reserved.
+        </div>
+    </footer>
+
+    <div class="diamond-decoration"></div>
+
+    <!-- START: MODAL POPUP STRUCTURE (Hidden by Default) -->
+    <div class="modal-backdrop" id="legal-modal" aria-hidden="true">
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+            <h3 id="modal-title"></h3>
+            <div class="modal-body">
+                <!-- Content injected by JavaScript -->
+            </div>
+        </div>
+    </div>
+    <!-- END: MODAL POPUP STRUCTURE -->
+
+    <script src="script.js"></script>
+</body>
+</html>

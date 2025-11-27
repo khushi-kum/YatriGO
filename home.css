@@ -1,0 +1,171 @@
+:root {
+  --primary: #1B2D2D;
+  --secondary: #d9d5ce;
+  --accent: #F4E1B6;
+  --bg: #656564;
+  --text: #2E2E2E;
+  --navy:#1B2D2D;
+  --soft-gray: #F4E1B6;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--navy);
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-container img {
+  height: 40px;
+  width: auto;
+}
+
+nav h1 {
+  font-size: 1.8rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, var(--primary), var(--accent));
+  color: white;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  background: white;
+  color: var(--primary);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+section {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.quote {
+  font-style: italic;
+  margin-top: 1rem;
+  color: var(--secondary);
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid var(--soft-gray);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  width: 250px;
+}
+
+#ready {
+  background: var(--accent);
+  color: var(--navy);
+  border-top: 2px solid var(--primary);
+}
+
+.cta-buttons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.cta-buttons button {
+  padding: 0.8rem 1.5rem;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+#contact {
+  background: var(--bg);
+  border-top: 2px solid var(--soft-gray);
+}
+
+.contact-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contact-info {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.contact-image img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+#contact .icon {
+  margin-right: 0.5rem;
+  display: inline;
+}
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--navy);
+  color: white;
+}
